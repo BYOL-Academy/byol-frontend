@@ -22,13 +22,11 @@ const Side = ({ children, content, ...rest }: SideProps) => {
           <div className='mb-6 flex items-center gap-4'>
             <Avatar className='border-2 border-white' shape='circle' src='/img/avatars/thumb-10.jpg' />
             <div className='text-white'>
-              <div className='font-semibold text-base'>Brittany Hale</div>
-              <span className='opacity-80'>CTO, Onward</span>
+              <div className='font-semibold text-base'>Divya Kirti</div>
+              <span className='opacity-80'>UPSC CSE 2023 AIR 7</span>
             </div>
           </div>
-          <p className='text-lg text-white opacity-80'>
-            Byol comes with a complete set of UI components crafted with Tailwind CSS, it fulfilled most of the use case to create modern and beautiful UI and application
-          </p>
+          <p className='text-lg text-white opacity-80'>Learn smarter. Practice better. Succeed faster — only on BYOL Academy.</p>
         </div>
         <span className='text-white'>
           Copyright &copy; {`${new Date().getFullYear()}`} <span className='font-semibold'>{`${APP_NAME}`}</span>{' '}

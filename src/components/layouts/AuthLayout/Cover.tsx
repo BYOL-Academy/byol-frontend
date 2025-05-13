@@ -20,9 +20,7 @@ const Cover = ({ children, content, ...rest }: CoverProps) => {
         <Logo mode='dark' />
         <div>
           <h3 className='text-white mb-4'>Jump start your project with Byol</h3>
-          <p className='text-lg text-white opacity-80 max-w-[700px]'>
-            Byol comes with a complete set of UI components crafted with Tailwind CSS, it fulfilled most of the use case to create modern and beautiful UI and application
-          </p>
+          <p className='text-lg text-white opacity-80 max-w-[700px]'>Learn smarter. Practice better. Succeed faster — only on BYOL Academy.</p>
         </div>
         <span className='text-white'>
           Copyright &copy; {`${new Date().getFullYear()}`} <span className='font-semibold'>{`${APP_NAME}`}</span>{' '}

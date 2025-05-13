@@ -14,7 +14,7 @@ import SegmentItemOption from '@/components/shared/SegmentItemOption'
 import { HiCheckCircle } from 'react-icons/hi'
 import { Field, Form, Formik } from 'formik'
 import CreatableSelect from 'react-select/creatable'
-import * as Yup from 'yup'
+import * as z from 'zod'
 import type { FieldProps } from 'formik'
 
 type Option = {
@@ -50,21 +50,21 @@ const segmentSelections = [
 const MIN_UPLOAD = 1
 const MAX_UPLOAD = 2
 
-const validationSchema = Yup.object().shape({
-    input: Yup.string()
+const validationSchema = z.object().shape({
+    input: z.string()
         .min(3, 'Too Short!')
         .max(20, 'Too Long!')
         .required('Please input user name!'),
-    select: Yup.string().required('Please select one!'),
-    multipleSelect: Yup.array().min(1, 'At least one is selected!'),
-    date: Yup.date().required('Date Required!').nullable(),
-    time: Yup.date().required('Time Required!').nullable(),
-    singleCheckbox: Yup.boolean().oneOf([true], 'You must tick this!'),
-    multipleCheckbox: Yup.array().min(1, 'Select at least one option!'),
-    radio: Yup.string().required('Please select one!'),
-    switcher: Yup.boolean().oneOf([true], 'You must turn this on!'),
-    upload: Yup.array().min(MIN_UPLOAD, 'At least one file uploaded!'),
-    segment: Yup.array().min(1, 'Select at least one option!'),
+    select: z.string().required('Please select one!'),
+    multipleSelect: z.array().min(1, 'At least one is selected!'),
+    date: z.date().required('Date Required!').nullable(),
+    time: z.date().required('Time Required!').nullable(),
+    singleCheckbox: z.boolean().oneOf([true], 'You must tick this!'),
+    multipleCheckbox: z.array().min(1, 'Select at least one option!'),
+    radio: z.string().required('Please select one!'),
+    switcher: z.boolean().oneOf([true], 'You must turn this on!'),
+    upload: z.array().min(MIN_UPLOAD, 'At least one file uploaded!'),
+    segment: z.array().min(1, 'Select at least one option!'),
 })
 
 const MixedFormControl = () => {

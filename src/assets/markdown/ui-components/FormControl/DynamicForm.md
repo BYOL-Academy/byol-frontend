@@ -4,7 +4,7 @@ import { FormItem, FormContainer } from '@/components/ui/Form'
 import Input from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
 import { HiMinus } from 'react-icons/hi'
-import * as Yup from 'yup'
+import * as z from 'zod'
 import type { FormikProps } from 'formik'
 
 type FormModel = {
@@ -15,12 +15,12 @@ type FormModel = {
     groupName: string
 }
 
-const validationSchema = Yup.object({
-    groupName: Yup.string().required('Group Name is required'),
-    users: Yup.array().of(
-        Yup.object().shape({
-            name: Yup.string().required('Name required'),
-            email: Yup.string()
+const validationSchema = z.object({
+    groupName: z.string().required('Group Name is required'),
+    users: z.array().of(
+        z.object().shape({
+            name: z.string().required('Name required'),
+            email: z.string()
                 .required('Email required')
                 .email('Enter valid email'),
         })
