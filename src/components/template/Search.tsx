@@ -36,13 +36,6 @@ const recommendedSearch: SearchResult[] = [
                 categoryTitle: 'Docs',
             },
             {
-                title: 'Changelog',
-                url: '/docs/changelog',
-                icon: 'changeLog',
-                category: 'Docs',
-                categoryTitle: 'Docs',
-            },
-            {
                 title: 'Button',
                 url: '/ui-components/button',
                 icon: 'common',

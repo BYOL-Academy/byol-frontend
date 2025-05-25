@@ -641,11 +641,4 @@ export const searchQueryPoolData = [
         category: 'Docs',
         categoryTitle: 'Docs',
     },
-    {
-        title: 'Changelog',
-        url: '/docs/changelog',
-        icon: 'changeLog',
-        category: 'Docs',
-        categoryTitle: 'Docs',
-    },
 ]
